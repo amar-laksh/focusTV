@@ -4,7 +4,6 @@ import platform
 import time
 import numpy as np
 import os
-import re
 
 __author__ = "Amar Lakshya"
 __copyright__ = "Copyright 2016"
@@ -18,8 +17,9 @@ __status__ = "Production"
 youtube = "YouTube"
 vlc = "VLC"
 VK_CODE = {'spacebar':0x20}
-cascPath = os.path.dirname("./haarcascade_frontalface_alt.xml")
-faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+cascPath = "./DATA/haarcascade_frontalface_alt.xml"
+
+faceCascade = cv2.CascadeClassifier(cascPath)
 
 
 class focus():
@@ -67,7 +67,7 @@ class focus():
                     if 'WM_NAME(STRING)' in j:
                             if title != j.split()[2]:
                                 focus = j[2:]
-            print focus
+
             if(this in focus[22:30]):
                 return 0
             else:

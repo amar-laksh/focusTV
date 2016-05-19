@@ -1,8 +1,8 @@
 # FOCUSTV
 
-It is an extremely responsive cross-platform face detection system implemented to keep you addicted to the screen! works with Youtube and VLC at this point. 
+Its an extremenly responsive cross-platform opencv tool to do one thing, help you in watching your multimedia more efficiently. Say good-bye to the hassle of pausing your
 
-It can pause videos automatically based on your faces' proximity and direction to the screen. 
+your videos again and again to get good or do other things! FocusTV automagically pauses and resumes whatever you're watching if you're not looking at it. Simple!
 
 **Windows Dependencies**
 
@@ -19,7 +19,6 @@ It can pause videos automatically based on your faces' proximity and direction t
 ```
  numpy 
  cv2    
- subprocess
  python-evdev
 ```
 **Installing OPENCV for Linux (Honestly, Best of luck)**
@@ -30,10 +29,12 @@ It can pause videos automatically based on your faces' proximity and direction t
 **USAGE**
 
 ```
- python focusTV.py
+ cd dist
+ cd focusTV
+ python focusTV.py or ./focusTV.py
 ```
 
-and Hope you Enjoy!
+Now it will only start when you open up a VLC/YouTube Window and Hope you Enjoy!
 
 **TODO-**
 
