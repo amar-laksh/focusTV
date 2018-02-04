@@ -45,3 +45,6 @@ Now it will only start when you open up a VLC/YouTube Window and Hope you Enjoy!
 -    Push to the branch: git push origin my-new-feature
 -    Submit a pull request :D
 
+**CMoC**
+
+- Just look at the issues and start contributing!
