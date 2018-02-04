@@ -19,24 +19,29 @@ Its an extremenly responsive cross-platform opencv tool to do one thing, help yo
  cv2    
  python-evdev
 ```
-**Installing OPENCV for Linux (Honestly, Best of luck)**
 
-[The Best OPENCV Tutorial, Your Welcome](http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/)
+**Installing**
+
+```bash
+ sudo apt install libopencv-dev python-opencv python-evdev python-numpy
+```
 
 
 **USAGE**
 
-```
- cd dist
+```bash
  cd focusTV
- python focusTV.py or ./focusTV.py
+ sudo python focusTV.py
 ```
 
 Now it will only start when you open up a VLC/YouTube Window and Hope you Enjoy!
 
-**TODO-**
+**Contributing**
 
-1. Refactor the heck out of the bad code
 
-2. Ask for support 
+-    Fork it!
+-    Create your feature branch: git checkout -b my-new-feature
+-    Commit your changes: git commit -am 'Add some feature'
+-    Push to the branch: git push origin my-new-feature
+-    Submit a pull request :D
 

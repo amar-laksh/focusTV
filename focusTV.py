@@ -17,7 +17,7 @@ __status__ = "Production"
 youtube = "YouTube"
 vlc = "VLC"
 VK_CODE = {'spacebar':0x20}
-cascPath = "./DATA/haarcascade_frontalface_alt.xml"
+cascPath = "./haarcascade_frontalface_alt.xml"
 
 faceCascade = cv2.CascadeClassifier(cascPath)
 
