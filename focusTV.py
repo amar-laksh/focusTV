@@ -6,7 +6,6 @@ import numpy as np
 import os
 
 __author__ = "Amar Lakshya"
-__copyright__ = "Copyright 2016"
 __credits__ = ["Amar Lakshya"]
 __license__ = "CC"
 __version__ = "0.2"
@@ -60,13 +59,15 @@ class focus():
             if root.stdout != root_check:
                 root_check = root.stdout
                 for i in root.stdout:
+                    i = i.decode()
                     if '_NET_ACTIVE_WINDOW(WINDOW):' in i:
                         id_ = i.split()[4]
                         id_w = Popen(['xprop', '-id', id_], stdout=PIPE)
                 for j in id_w.stdout:
+                    j = j.decode()
                     if 'WM_NAME(STRING)' in j:
-                            if title != j.split()[2]:
-                                focus = j[2:]
+                        if title != j.split()[2]:
+                            focus = j[2:]
 
             if(this in focus[22:30]):
                 return 0
@@ -111,9 +112,9 @@ class focus():
         if(self.inFocus(youtube)) :
             from evdev import uinput, ecodes as e
             capabilities = {
-                            e.EV_ABS : (e.ABS_X, e.ABS_Y),
-                            e.EV_KEY : (e.BTN_LEFT, e.BTN_RIGHT),
-                            }
+                    e.EV_ABS : (e.ABS_X, e.ABS_Y),
+                    e.EV_KEY : (e.BTN_LEFT, e.BTN_RIGHT),
+                    }
             with uinput.UInput(capabilities) as ui:
                 ui.write(e.EV_ABS, e.ABS_X, 200)
                 ui.write(e.EV_ABS, e.ABS_Y, 200)
@@ -141,7 +142,7 @@ class focus():
         while True:
             while ((self.inFocus(vlc) or self.inFocus(youtube))):
                 # Capture frame-by-frame
-                ret, frame = video_capture.read()
+                _, frame = video_capture.read()
                 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 # FACES ATTRIBUTES
                 gray = np.array(gray, dtype='uint8')
@@ -166,7 +167,7 @@ class focus():
         cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    time.sleep(2)	# Just wait a little bit for the user to catch up
+    time.sleep(2)       # Just wait a little bit for the user to catch up
     track = focus()
     track.headtracker()
 
