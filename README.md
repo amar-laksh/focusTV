@@ -1,6 +1,6 @@
 # FOCUSTV
 
-Its an extremenly responsive cross-platform opencv tool to do one thing, help you in watching your multimedia more efficiently. Say good-bye to the hassle of pausing your videos again and again to get good or do other things! FocusTV automagically pauses and resumes whatever you're watching if you're not looking at it. Simple!
+Its a responsive cross-platform opencv tool to do one thing, help you in watching your multimedia more efficiently. Say good-bye to the hassle of pausing your videos again and again to get good or do other things! FocusTV automagically pauses and resumes whatever you're watching if you're not looking at it. Simple!
 
 **Windows Dependencies**
 
